@@ -1,0 +1,50 @@
+package problem12;
+
+import java.util.HashMap;
+
+public class RepeatingNum {
+	
+	 static void printFirstRepeating(int a[])
+	    {	int n= a.length;
+	        int min = -1;
+	        
+	        HashMap <Integer,Integer> m = new HashMap<Integer, Integer>();
+	        int ans=0;
+	        for(int i=0;i<n;i++)
+	        {
+	        	if(m.get(a[i])==null) {
+	        		m.put(a[i],1);
+	        	}
+	        	else {
+	        		m.put(a[i], m.get(a[i])+1);
+	        	}
+	  
+	            if(m.get(a[i])>1)
+	            {
+	                ans=a[i];
+	                break;
+	            }
+	        }
+	        if(ans==0)
+	        {
+	            System.out.println("No element repeated");
+	        }
+	        else
+	        {
+	          System.out.println("repeated value: "ans);
+	        }
+	    }
+	 
+	    
+	    public static void main (String[] args) throws java.lang.Exception
+	    {
+	        int arr[] = { 1, 2, 3, 10, 2, 4, 5, 7, 8 };
+	        printFirstRepeating(arr);
+	        
+	        
+	        int arr1[] = {1, 2, 3, 10, 6, 4, 3, 7, 10};
+	        printFirstRepeating(arr1);
+	        
+	        
+	    }
+}

@@ -1,0 +1,16 @@
+package parser;
+
+public class Parser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String txt= ("23  +  45  -  (  343  /  12  ) ");
+		String delims = "[+-/)( ]+"; //+ to treats diff delimiters as one
+		String[] w=txt.split(delims);
+		
+		for(String w1:w){  
+			System.out.println(w1); 
+			//System.out.println(" ");
+		}
+
+}}

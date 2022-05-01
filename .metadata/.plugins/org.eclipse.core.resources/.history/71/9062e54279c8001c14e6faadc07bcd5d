@@ -1,0 +1,14 @@
+package problem_8_1;
+
+class Printer implements Runnable{
+public  Printer(Storage s) 
+	{ 
+		
+	}
+
+public void run(){
+
+	System.out.println();
+
+	}
+}

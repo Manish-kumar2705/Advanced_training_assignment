@@ -1,0 +1,19 @@
+package sequence;
+
+import java.util.Scanner;
+
+public class Sequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc= new Scanner(System.in);
+		int a=sc.nextInt();
+		sc.nextLine();
+		int b= sc.nextInt();
+		sc.nextLine();
+		System.out.print(a + "\n");
+		System.out.println(b);
+	}
+
+}

@@ -1,0 +1,34 @@
+package bank;
+
+public class BankAccount {
+int accNo;
+float balance;
+String custName, accType;
+
+public BankAccount(int accNo, float balance, String custName, String accType) {
+	super();
+	this.accNo = accNo;
+	this.balance = balance;
+	this.custName = custName;
+	this.accType = accType;
+}
+
+public void deposit(float amt) throws Exception {
+	if(amt<0)
+		throw new NumberFormatException("cant deposte to negative amount");
+	else
+		{
+		balance = getBalance()+amt;
+	System.out.println(amt+"deposited successfully");
+		}
+}
+
+public void withdraw(float amt){
+	
+}
+
+public float getBalance() throws Exception{
+	
+	return balance;
+}
+}

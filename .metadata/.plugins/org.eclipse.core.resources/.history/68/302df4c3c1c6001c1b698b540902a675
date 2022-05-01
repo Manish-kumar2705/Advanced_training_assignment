@@ -1,0 +1,34 @@
+package book;
+
+import java.util.Scanner;
+
+public class BookTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Book b1 = new Book();
+		b1.setBookTitle("Java Programming");
+		b1.setBookPrice(350.50f);
+		System.out.println(b1.getBookTitle());
+		System.out.println(b1.getBookPrice());
+		
+		
+	public void  createBooks(){
+		System.out.println("enter the no. of books you want to create");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		Book[] book = new Book[n];
+		for(int i=0; i<n; i++) {
+			String bookTitle=sc.nextLine() ;
+			int bookPrice= sc.nextInt();
+			book[i].setBookTitle(bookTitle);
+			book[i].setBookPrice(bookPrice);
+		}
+	}
+	
+		
+		ShowBooks(){}
+		
+	}
+
+}

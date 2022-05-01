@@ -1,0 +1,16 @@
+package string;
+
+public class Stringg {
+ public static void main(String args[]) {
+	String str= "JAVA is simple";
+	System.out.println(str.toUpperCase()); //UpperCase
+	System.out.println(str.toLowerCase());
+	
+	String[] words1=str.split("\\s"); // Change order 
+	for(String w:words1){  
+		System.out.println(w); 
+	}
+ }
+}
+ 
+ 

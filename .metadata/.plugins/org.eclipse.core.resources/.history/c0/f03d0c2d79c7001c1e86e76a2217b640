@@ -1,0 +1,47 @@
+package linkedlist;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+public class EmployeeTest {
+	public static void main(String[] args){
+
+	Employee e1=new Employee (101,"Manish", "kumar");
+	Employee e2=new Employee (102,"Ankit", "kuamr");
+	LinkedList<Employee> list = new LinkedList <>();
+	list.add(e1);
+	list.add(e2);
+	addInuput(list);
+	display(list);
+	
+	}
+	public static void addInuput(LinkedList<Employee> listPara) {
+		ListIterator<Employee> itr = listPara.listIterator();
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Forward Direction Iteration:");
+		
+        while (itr.hasNext()) {
+        Employee e=itr.next();
+        System.out.println("enter employee details: \nname:");
+        e.setEname(sc.nextLine());
+        System.out.println("address");
+        e.setAddres(sc.nextLine());
+        System.out.println("emp id:");
+        e.setEmpid(sc.nextInt());
+        sc.nextLine();
+        
+        }
+      }
+	public static void display(LinkedList<Employee> listPara) {
+		ListIterator<Employee> itr = listPara.listIterator();
+		 while (itr.hasNext()) {
+		        Employee e=itr.next();
+		        System.out.println(e.getEmpid());
+		        System.out.println(e.getEname());
+		        System.out.println(e.getAddress());
+		        }
+		
+	}
+}

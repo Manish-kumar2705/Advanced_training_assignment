@@ -1,0 +1,21 @@
+package problem_8_1;
+
+class Printer implements Runnable{
+	Storage s;
+public  Printer(Storage s) 
+	{ 
+		this.s= s;
+	}
+
+synchronized public void run(){
+
+	System.out.println(s.getX());
+	try {
+		wait();
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	notifyAll();
+	}
+}

@@ -1,0 +1,44 @@
+package book;
+
+import java.util.Scanner;
+
+public class BookTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("enter the no. of books you want to create");
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		 sc.nextLine();
+		
+		Book[] book = new Book[n]; //creating an array of type book
+		
+		createBooks(n,book,sc);
+		showBooks(n,book);
+	
+	}
+	public static void  createBooks(int n,Book[] book,Scanner sc) {
+		for(int i=0; i<n; i++) {
+			System.out.println("enter book title for book "+(i+1)+":");
+			String bookTitlenew=sc.nextLine();
+			System.out.println("enter book price for book "+(i+1)+":");
+			float bookPricenew= sc.nextFloat();
+			 sc.nextLine();
+			book[i] =new Book();//crating obj here
+			book[i].setBookTitle(bookTitlenew);
+			book[i].setBookPrice(bookPricenew);
+		}
+	}
+	public static void showBooks(int n,Book[] book){
+		
+		System.out.println("book details:\n");
+		for(int i=0; i<n; i++) {
+			
+			System.out.println("book name: "+book[i].getBookTitle());
+			System.out.println("book name: "+book[i].getBookPrice());
+			}
+	}
+
+}

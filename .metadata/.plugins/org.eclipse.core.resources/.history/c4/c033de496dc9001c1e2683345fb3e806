@@ -1,0 +1,13 @@
+package problem_14;
+
+public class MergeTwoArrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int a[] = { 10, 5, 15 };
+		 int b[] = { 20, 3, 2 };
+	     int n = a.length;
+	     int m = b.length;
+	}
+
+}

@@ -1,0 +1,57 @@
+package rectangle;
+
+import java.util.Scanner;
+
+public class Rectangle {
+	
+	float length;
+	float breadth;
+	float area;
+	float perimeter;
+	public Rectangle(float length, float breadth) {
+		super();
+		this.length = length;
+		this.breadth = breadth;
+		
+	}
+	void input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.pr("Enter length of rectangle: ");
+        this.length = sc.nextFloat();
+        System.out.pr("Enter breadth of rectangle: ");
+        this.breadth = sc.nextFloat();
+	}
+	void calculateArea() {
+		area = length*breadth;
+	}
+	void calculatePerimeter() {
+		perimeter=2*(length+breadth);
+	}
+	public void getLength() {
+		return length;
+	}
+	public void  setLength(float length) {
+		if(length>0 && length<20)
+			this.length = length;
+			else
+				System.err.prln("enter value from 0 to 20");
+	}
+	public float  getBreadth() {
+		return breadth;
+	}
+	public void setBreadth(float breadth) {
+		if(breadth>0 && breadth<20)
+		this.breadth = breadth;
+		else
+			System.err.println("enter value from 0 to 20");
+	}
+	void displayArea() {
+		System.out.println("area of rectangle is :" + area);
+	}
+	void displayPerimeter() {
+		System.out.println("perimeter of rectangle is :" + perimeter);
+	}
+	
+	
+	
+}

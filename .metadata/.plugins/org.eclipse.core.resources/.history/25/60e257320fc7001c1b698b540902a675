@@ -1,0 +1,20 @@
+package string;
+
+public class Stringg {
+ public static void main(String args[]) {
+	String str= "JAVA is simple";
+	System.out.println(str.toUpperCase()); //UpperCase
+	System.out.println(str.toLowerCase());
+	
+	
+	String arr[]=str.split(" ",2); 
+	
+	for (String string : arr) {
+		string.toUpperCase().charAt(0);
+		System.out.print(string.charAt(0)+" "); 
+		}
+	}
+ }
+
+ 
+ 

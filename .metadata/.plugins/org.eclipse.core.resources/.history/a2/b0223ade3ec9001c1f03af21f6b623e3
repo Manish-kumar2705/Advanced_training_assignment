@@ -1,0 +1,18 @@
+package problem_10;
+
+import java.util.Scanner;
+
+public class Inter {
+
+	public static void main(java.lang.String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter The First String :");
+		java.lang.String x=sc.nextLine();
+		System.out.println("Enter The Second String :");
+		Inter y=sc.nextLine();
+		System.out.println("Enter The Third String :");
+		Inter z=sc.nextLine();
+	}
+
+}

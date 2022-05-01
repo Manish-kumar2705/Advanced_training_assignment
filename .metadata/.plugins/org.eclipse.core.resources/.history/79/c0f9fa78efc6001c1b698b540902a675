@@ -1,0 +1,68 @@
+package bank;
+
+public class BankAccount {
+int accNo;
+float balance;
+String custName, accType;
+
+public BankAccount(int accNo, float balance, String custName, String accType) {
+	super();
+	this.accNo = accNo;
+	this.balance = balance;
+	this.custName = custName;
+	this.accType = accType;
+}
+
+public void deposit(float amt) throws Exception {
+	if(amt<0)
+		throw new NumberFormatException("cant deposte to negative amount");
+	else
+		{
+		balance = getBalance()+amt;
+	System.out.println(amt+"deposited successfully");
+		}
+}
+
+public void withdraw(float amt) throws Exception{
+	if(accType.equalsIgnoreCase("savings")) {
+		if(getBalance()-amt<1000) {
+			throw new Exception("insufficinet funds, transaction cancelled.");
+		}
+		else
+		{
+			balance=getBalance()-amt;
+		}
+	}
+	if(accType.equalsIgnoreCase("current account")) {
+		if(getBalance()-amt<5000) {
+			throw new Exception("insufficinet funds, transaction cancelled.");
+		}
+		else
+		{
+			balance=getBalance()-amt;
+		}
+	}
+}
+
+public float getBalance() throws Exception{
+	
+	 if( balance <1000)
+     {
+     try
+     {   
+         throw new NumberFormatException();
+     }
+     catch(NumberFormatException nw)
+     {
+         System.out.println("Balance is low"+balance);
+     }
+     }
+    
+    
+     return balance;
+}
+void display()
+{
+System.out.println("Balance is ="+getBalance());   
+}
+}

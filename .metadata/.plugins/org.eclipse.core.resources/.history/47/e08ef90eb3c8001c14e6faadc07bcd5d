@@ -1,0 +1,15 @@
+package problem_8_1;
+
+class Printer implements Runnable{
+	Storage s;
+public  Printer(Storage s) 
+	{ 
+		this.s= s;
+	}
+
+synchronized public void run(){
+
+	System.out.println(s.getX());
+notify();
+	}
+}

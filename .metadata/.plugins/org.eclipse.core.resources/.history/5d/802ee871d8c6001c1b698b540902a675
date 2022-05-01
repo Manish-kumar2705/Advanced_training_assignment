@@ -1,0 +1,22 @@
+package sequence;
+
+import java.util.Scanner;
+
+public class Sequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc= new Scanner(System.in);
+		int a=sc.nextInt();
+		sc.nextLine();
+		int b= sc.nextInt();
+		sc.nextLine();
+		System.out.print(a + "\t");
+		System.out.println(b);
+		for (int i = 3; i <= 13; i++) {
+			System.out.println("5"+ "\t");
+		}
+	}
+
+}

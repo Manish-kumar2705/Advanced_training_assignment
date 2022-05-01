@@ -1,0 +1,11 @@
+package parser;
+
+public class Parser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	String input= "23  +      45   -(   343   /   12  )" ;
+	
+	}
+
+}

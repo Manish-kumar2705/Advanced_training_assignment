@@ -1,0 +1,22 @@
+package string;
+
+public class StringOps {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String name= "Manish";
+		char arr[]=name.toCharArray();
+		char temp;
+		for(int i = 0; i<arr.length-1; i++) {
+			temp=arr[i];
+			int j=i+1;
+			while(j<arr.length-1) {
+			arr[j-1]=arr[j];
+			j++;}
+			System.out.println(arr);
+			
+		}
+	}
+
+}

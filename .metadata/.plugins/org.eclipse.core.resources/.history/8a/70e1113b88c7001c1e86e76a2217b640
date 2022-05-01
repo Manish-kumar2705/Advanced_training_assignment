@@ -1,0 +1,31 @@
+package  phonebook;
+
+import java.util.LinkedHashMap;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+class PhonebookMap{
+	public static void main(String args[]) {
+	LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+	String input = "man";//EMPTY STRING
+	 
+    Pattern pattern = Pattern.compile("(.+)-(.+)");//USING PATTERN+MATCHER TO DIVIDE THE input TO KEYS AND VALUES - REGEX FOR GROUP 1 + GROUP 2; THE DOT (.) MEANS ANY CHARACTER; THE PLUS SIGN (+) MEANS ONE OR MORE TIMES
+    
+    Scanner sc= new Scanner(System.in);
+    while (!(input = sc.nextLine()).equals("search")) {//CHECKING WHETHER THE input is search
+        Matcher matcher = pattern.matcher(input);//USING MATCHER
+        if (matcher.find()) {
+            map.put(matcher.group(1), matcher.group(2));//PUTTING THE ELEMENTS INTO THE map
+        }
+    }
+
+    while (!(input = sc.nextLine()).equals("stop")) {//CHECKING WHETHER THE input is stop
+        if (map.containsKey(input)) {
+            System.out.printf("%s -> %s\n", input, map.get(input));
+        } else {
+            System.out.printf("Contact %s does not exist.\n", input);
+        }
+    }
+}
+}

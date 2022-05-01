@@ -1,0 +1,44 @@
+package rectangle;
+
+import java.util.Scanner;
+
+public class TestRectangle {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Rectangle  obj1 = new Rectangle(1, 1);
+		obj1.input();
+		obj1.calculateArea();
+		obj1.displayArea();
+		System.out.println("\n");
+		Rectangle  obj2 = new Rectangle(1, 1);
+		System.out.print("Enter length of rectangle: ");
+		float len= sc.nextFloat();
+		sc.nextLine();
+		obj2.setLength(len);
+		System.out.print("Enter breadth of rectangle: ");
+		int brth= sc.nextFloat();
+		sc.nextLine();
+		obj2.setBreadth(brth);
+		obj2.calculateArea();
+		obj2.displayArea();
+		System.out.println("\n");
+		Rectangle  obj3 = new Rectangle(1, 1);
+		obj3.input();
+		obj3.calculatePerimeter();
+		obj3.displayPerimeter();
+		System.out.println("\n");
+		Rectangle  obj4 = new Rectangle(0, 0);
+		obj4.input();
+		obj4.calculatePerimeter();
+		obj4.displayPerimeter();
+		System.out.println("\n");
+		Rectangle  obj5 = new Rectangle(0, 0);
+		obj5.input();
+		obj5.calculatePerimeter();
+		obj5.displayPerimeter();
+		System.out.println("\n");
+		System.out.println("execution completed");
+	}
+
+}

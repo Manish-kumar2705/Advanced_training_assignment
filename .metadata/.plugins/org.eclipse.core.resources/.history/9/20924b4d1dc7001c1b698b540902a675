@@ -1,0 +1,26 @@
+package string;
+
+public class StringOps {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String name= "Manish";
+		char arr[]=name.toCharArray();
+		char temp;
+		for(int i = 0; i<arr.length; i++) {
+			temp=arr[0];
+			int j=1;
+			
+			while(j<arr.length) {
+			arr[j-1]=arr[j];
+			j++;
+			}
+			
+			arr[j-1]=temp;
+			System.out.println(arr);
+			
+		} 
+	}
+
+}

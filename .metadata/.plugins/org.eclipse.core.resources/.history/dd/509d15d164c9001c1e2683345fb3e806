@@ -1,0 +1,12 @@
+package problem_13;
+
+
+public class LinkedListNode {
+	Node head;
+	class Node{
+		int data;
+		Node next;
+		
+	}
+	
+}

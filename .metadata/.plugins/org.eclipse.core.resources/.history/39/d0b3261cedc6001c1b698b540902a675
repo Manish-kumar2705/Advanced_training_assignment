@@ -1,0 +1,20 @@
+package bank;
+
+public class BankAccount {
+int accNo;
+float balance;
+String custName, accType;
+
+public void deposit(float amt) throws Exception {
+	
+}
+
+public void withdraw(float amt){
+	
+}
+
+public float getBalance() throws Exception{
+	
+	return currentBalance;
+}
+}

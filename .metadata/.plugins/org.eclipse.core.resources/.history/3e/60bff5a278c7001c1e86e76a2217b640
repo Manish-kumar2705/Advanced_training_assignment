@@ -1,0 +1,39 @@
+package linkedlist;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class EmployeeTest {
+	public static void main(String[] args){
+
+	Employee e1=new Employee (101,"Manish", "kumar");
+	Employee e2=new Employee (102,"Ankit", "kuamr");
+	LinkedList<Employee> list = new LinkedList <>();
+	list.add(e1);
+	list.add(e2);
+	addInuput(list);
+	display(list);
+	
+	}
+	public static void addInuput(LinkedList<Employee> listPara) {
+		ListIterator<Employee> itr = listPara.listIterator();
+		
+		System.out.println("Forward Direction Iteration:");
+        while (itr.hasNext()) {
+        Employee e=itr.next();
+        e.setEname("raman");
+        e.setEmpid(101);
+        e.setAddres("delhi");
+        }
+      }
+	public static void display(LinkedList<Employee> listPara) {
+		ListIterator<Employee> itr = listPara.listIterator();
+		 while (itr.hasNext()) {
+		        Employee e=itr.next();
+		        System.out.println(e.getEmpid());
+		        System.out.println(e.getEname());
+		        System.out.println(e.getAddress());
+		        }
+		
+	}
+}

@@ -1,0 +1,21 @@
+package problem_8_1;
+
+public class Counter implements Runnable{
+	
+	Storage s;
+	public Counter(Storage s) {
+		super();
+		this.s = s;
+	}
+	
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	for(int i = 0;i<10 ;i++) {
+		s.setX(i);
+		
+		Printer p = new Printer(s);
+		p.run();
+	}
+ }
+}
